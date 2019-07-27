@@ -1,0 +1,46 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: broker
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: broker
+        tier: backend
+        implementation: springboot
+    spec:
+     imagePullSecrets:
+       - name: regsecret
+     containers:
+      - name: broker
+        image: de.icr.io/ammbra/broker:1
+        imagePullPolicy: Always
+        ports:
+            - name: http
+              containerPort: 8080
+        env:
+            - name: DATABASE_CREDENTIALS
+              valueFrom:
+                secretKeyRef: 
+                  name: binding-cloudant
+                  key: binding
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: broker
+  labels:
+    app: broker
+    tier: backend
+spec:
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: http
+    nodePort: 31248
+  selector:
+    app: broker
+    tier: backend

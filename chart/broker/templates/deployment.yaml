@@ -1,0 +1,44 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: {{ template "broker.fullname" . }}
+  labels:
+    app: {{ template "broker.name" . }}
+    chart: {{ template "broker.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "broker.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "broker.name" . }}
+        release: {{ .Release.Name }}
+    spec:
+      imagePullSecrets:
+       - name: {{ .Values.image.pullSecret }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.deployment.containers.image }}:{{ .Values.deployment.containers.imageTag }}"
+          imagePullPolicy: {{ .Values.deployment.containers.imagePullPolicy }}
+          ports:
+            - name: {{ .Values.deployment.containers.ports.name }}
+              containerPort: {{ .Values.deployment.containers.ports.containerPort }}
+          env:
+            - name:  {{ .Values.deployment.containers.env.name }}
+              valueFrom:
+                secretKeyRef: 
+                  name: {{ .Values.deployment.containers.env.valueFrom.secretKeyRef.name }}
+                  key: {{ .Values.deployment.containers.env.valueFrom.secretKeyRef.key }}
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http

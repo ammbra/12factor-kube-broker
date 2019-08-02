@@ -1,0 +1,17 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head th:substituteby="header :: copy"></head>
+<body>
+
+	<h3>Hello from the other side</h3>
+	
+	<ul>
+		<li><a href="/swagger-ui.html">Swagger!</a></li>
+		<li><a href="/broker">Brokers</a></li>
+		<li><a href="/customer">Customers</a></li>
+	</ul>
+	
+	<div th:substituteby="footer :: copy"></div>
+
+</body>
+</html>

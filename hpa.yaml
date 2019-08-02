@@ -1,0 +1,19 @@
+apiVersion: autoscaling/v1 #autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: broker
+spec:
+  maxReplicas: 5
+  minReplicas: 2
+  scaleTargetRef:
+    apiVersion: extensions/v1beta1
+    kind: Deployment
+    name: broker
+  targetCPUUtilizationPercentage: 70
+#  metrics:
+#    - resource:
+#       name: cpu
+#       target:
+#        averageUtilization: 70
+#        type: Utilization
+#      type: Resource

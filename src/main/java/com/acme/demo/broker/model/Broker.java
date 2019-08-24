@@ -94,8 +94,6 @@ public class Broker {
 
 	@Override
 	public boolean equals(Object object) {
-		// TODO: Warning - this method won't work in the case the id fields are not set
-
 		if (!(object instanceof Broker)) {
 			return false;
 		}
@@ -107,11 +105,18 @@ public class Broker {
 		return true;
 	}
 
-	@Override
-	public String toString() {
-		return "Broker [_id=" + _id + ", _rev=" + _rev + ", title=" + title + ", brokerName=" + brokerName
-				+ ", mobilePhone=" + mobilePhone + ", email=" + email + ", type=" + type + "]";
+
+	@java.lang.Override
+	public java.lang.String toString() {
+		final java.lang.StringBuffer sb = new java.lang.StringBuffer("Broker{");
+		sb.append("_id='").append(_id).append('\'');
+		sb.append(", _rev='").append(_rev).append('\'');
+		sb.append(", title='").append(title).append('\'');
+		sb.append(", brokerName='").append(brokerName).append('\'');
+		sb.append(", mobilePhone='").append(mobilePhone).append('\'');
+		sb.append(", email='").append(email).append('\'');
+		sb.append(", type='").append(type).append('\'');
+		sb.append('}');
+		return sb.toString();
 	}
-
-
 }

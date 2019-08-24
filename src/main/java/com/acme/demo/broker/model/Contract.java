@@ -105,7 +105,6 @@ public class Contract {
 
 	@Override
 	public boolean equals(Object object) {
-		// TODO: Warning - this method won't work in the case the id fields are not set
 		if (!(object instanceof Contract)) {
 			return false;
 		}
@@ -116,13 +115,19 @@ public class Contract {
 		return true;
 	}
 
-	@Override
-	public String toString() {
-		return "Contract [_id=" + _id + ", _rev=" + _rev + ", transactionDate=" + transactionDate + ", transactionType="
-				+ transactionType + ", customerId=" + customerId + ", brokerId=" + brokerId + ", type=" + type
-				+ ", value=" + value + "]";
+
+	@java.lang.Override
+	public java.lang.String toString() {
+		final java.lang.StringBuffer sb = new java.lang.StringBuffer("Contract{");
+		sb.append("_id='").append(_id).append('\'');
+		sb.append(", _rev='").append(_rev).append('\'');
+		sb.append(", transactionDate=").append(transactionDate);
+		sb.append(", transactionType=").append(transactionType);
+		sb.append(", customerId='").append(customerId).append('\'');
+		sb.append(", brokerId='").append(brokerId).append('\'');
+		sb.append(", type='").append(type).append('\'');
+		sb.append(", value=").append(value);
+		sb.append('}');
+		return sb.toString();
 	}
-
-	
-
 }

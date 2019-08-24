@@ -1,9 +1,12 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: broker
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: broker
   template:
     metadata:
       labels:
@@ -15,7 +18,7 @@ spec:
        - name: regsecret
      containers:
       - name: broker
-        image: de.icr.io/ammbra/broker:1
+        image: <REPLACE_WITH_YOUR_OWN_IMAGE_REGISTRY_LOCATION>
         imagePullPolicy: Always
         ports:
             - name: http

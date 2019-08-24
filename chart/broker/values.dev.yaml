@@ -1,4 +1,4 @@
-# Default values for broker.
+# Dev values for broker chart.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -8,7 +8,7 @@ image:
   pullSecret: regsecret
 deployment:
   containers:
-      image: de.icr.io/ammbra/broker
+    image: <REPLACE_WITH_YOUR_OWN_IMAGE_REGISTRY_LOCATION>
       imageTag: 1
       imagePullPolicy: Always
       ports:

@@ -24,7 +24,6 @@ public class Contract {
 	
 	private String type;
 	
-	@JsonIgnore
 	private Money value;
 
 	public Contract() {

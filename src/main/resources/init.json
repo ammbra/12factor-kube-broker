@@ -1,1 +1,107 @@
-content=[{"lastName":"Strand","firstName":"Cindy","streetAddress":"Fifth Avenue 554","cityStateZip":"18845","customerType":"OWNER","type":"customer"},{"title":"Ms","brokerName":"Broker Name1","mobilePhone":"000417136864","email":"brokername4@bn1.com","type":"broker"},{"lastName":"Well","firstName":"Joan","streetAddress":"Sixth Avenue 54","cityStateZip":"18845","customerType":"OWNER","type":"customer"},{"_id":"572e70270e79f49a2c710f95a0590083","title":"Ms","brokerName":"Broker Name3","mobilePhone":"73517947559260","email":"brokername3@bn2.com","type":"broker"},{"lastName":"Ding","firstName":"Joe","streetAddress":"Rodeo Drive 18","cityStateZip":"11145","customerType":"RENTER","type":"customer"},{"lastName":"Doe","firstName":"Johnny","streetAddress":"Rodeo Drive 9","cityStateZip":"12345","customerType":"BUYER","type":"customer"},{"title":"Mr","brokerName":"Chris Anderson","mobilePhone":"3274175955","type":"broker"},{"transactionDate":"Feb 16, 2019 7:15:24 PM","transactionType":"SALE","customerId":"7eaaebc9ad5d49e8ae64bc01fbf456a7","brokerId":"41d7c965c1fef8bb4e168e802cf2a537","type":"contract","value":{"amount":420.74,"currency":"USD"}},{"zip":"2353646","bedrooms":"5","transactionType":"SALE","brokerId":"41d7c965c1fef8bb4e168e802cf2a537","baths":"1","address":"Rodeo Drive 35","price":{"amount":"5767","currency":"USD"},"brokerName":"Broker Name1","type":"property","tags":"central"},{"lastName":"Known","firstName":"Alan","streetAddress":"Rodeo Drive 58","cityStateZip":"11145","customerType":"RENTER","type":"customer"},{"transactionDate":"Feb 16, 2019 7:15:24 PM","transactionType":"RENT","customerId":"46175cc9f360a07551ad2aabb9def752","brokerId":"856ef99ed90afcbb06aef0534235186d","type":"contract","value":{"amount":421.74,"currency":"USD"}},{"lastName":"Rope","firstName":"Diana","streetAddress":"Rodeo Drive 16","cityStateZip":"44545","customerType":"BUYER","type":"customer"}]
+content=[
+  {
+    "lastName": "Strand",
+    "firstName": "Cindy",
+    "streetAddress": "Fifth Avenue 554",
+    "cityStateZip": "18845",
+    "customerType": "OWNER",
+    "type": "customer"
+  },
+  {
+    "title": "Ms",
+    "brokerName": "Broker Name1",
+    "mobilePhone": "000417136864",
+    "email": "brokername4@bn1.com",
+    "type": "broker"
+  },
+  {
+    "lastName": "Well",
+    "firstName": "Joan",
+    "streetAddress": "Sixth Avenue 54",
+    "cityStateZip": "18845",
+    "customerType": "OWNER",
+    "type": "customer"
+  },
+  {
+    "title": "Ms",
+    "brokerName": "Broker Name3",
+    "mobilePhone": "73517947559260",
+    "email": "brokername3@bn2.com",
+    "type": "broker"
+  },
+  {
+    "lastName": "Ding",
+    "firstName": "Joe",
+    "streetAddress": "Rodeo Drive 18",
+    "cityStateZip": "11145",
+    "customerType": "RENTER",
+    "type": "customer"
+  },
+  {
+    "lastName": "Doe",
+    "firstName": "Johnny",
+    "streetAddress": "Rodeo Drive 9",
+    "cityStateZip": "12345",
+    "customerType": "BUYER",
+    "type": "customer"
+  },
+  {
+    "title": "Mr",
+    "brokerName": "Chris Anderson",
+    "mobilePhone": "3274175955",
+    "type": "broker"
+  },
+  {
+    "transactionDate": "Feb 16, 2019 7:15:24 PM",
+    "transactionType": "SALE",
+    "customerId": "7eaaebc9ad5d49e8ae64bc01fbf456a7",
+    "brokerId": "41d7c965c1fef8bb4e168e802cf2a537",
+    "type": "contract",
+    "value": {
+      "amount": 420.74,
+      "currency": "USD"
+    }
+  },
+  {
+    "zip": "2353646",
+    "bedrooms": "5",
+    "transactionType": "SALE",
+    "brokerId": "41d7c965c1fef8bb4e168e802cf2a537",
+    "baths": "1",
+    "address": "Rodeo Drive 35",
+    "price": {
+      "amount": "5767",
+      "currency": "USD"
+    },
+    "brokerName": "Broker Name1",
+    "type": "property",
+    "tags": "central"
+  },
+  {
+    "lastName": "Known",
+    "firstName": "Alan",
+    "streetAddress": "Rodeo Drive 58",
+    "cityStateZip": "11145",
+    "customerType": "RENTER",
+    "type": "customer"
+  },
+  {
+    "transactionDate": "Feb 16, 2019 7:15:24 PM",
+    "transactionType": "RENT",
+    "customerId": "46175cc9f360a07551ad2aabb9def752",
+    "brokerId": "856ef99ed90afcbb06aef0534235186d",
+    "type": "contract",
+    "value": {
+      "amount": 421.74,
+      "currency": "USD"
+    }
+  },
+  {
+    "lastName": "Rope",
+    "firstName": "Diana",
+    "streetAddress": "Rodeo Drive 16",
+    "cityStateZip": "44545",
+    "customerType": "BUYER",
+    "type": "customer"
+  }
+]

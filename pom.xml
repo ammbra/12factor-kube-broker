@@ -16,7 +16,7 @@
 		<fabric8.version>0.1.6</fabric8.version>
 		<cloudant.client.version>2.5.1</cloudant.client.version>
 		<swagger.version>2.6.1</swagger.version>
-		<json.version>20171018</json.version>
+		<json.version>20230227</json.version>
 	</properties>
 	<parent>
 		<groupId>org.springframework.boot</groupId>

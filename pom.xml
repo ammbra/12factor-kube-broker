@@ -15,7 +15,7 @@
 		<javaasist.version>3.20.0-GA</javaasist.version>
 		<fabric8.version>0.1.6</fabric8.version>
 		<cloudant.client.version>2.5.1</cloudant.client.version>
-		<swagger.version>2.6.1</swagger.version>
+		<swagger.version>2.10.0</swagger.version>
 		<json.version>20231013</json.version>
 	</properties>
 	<parent>
